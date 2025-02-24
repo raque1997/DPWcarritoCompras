@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito</title>
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-light text-dark">
+  <!-- Menu -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="./img/9cf4daa9-81dd-4b65-80c9-5df8e162c4cd.jpg" id="logo" alt="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="cart.html">Carrito</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <div class="row">
+      <!-- Shopping Cart Items -->
+      <div class="col-md-7 mb-3 mb-md-0">
+        <div class="mb-3">
+          <a href="products.html" class="text-decoration-none text-dark">
+            <i class="bi bi-arrow-left"></i> Continuar comprando
+          </a>
+        </div>
+        <div class="bg-white rounded p-3 shadow-sm">
+          <h5>Carrito de compras</h5>
+          <p id="quantity-items"></p>
+
+          <div id="container-cart">
+            <!-- Item 1 -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Payment Card Details -->
+      <div class="col-md-5">
+        <div class="card bg-white text-dark shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Detalles de la tarjeta</h5>
+            <div class="mb-3">
+              <img src="img/visa.png" alt="Visa">
+              <img src="img/mcard.png" alt="Mastercard">
+              <img src="img/paypal.png" alt="Paypal">
+            </div>
+            <div class="mb-3">
+              <label for="cardholderName" class="form-label">Nombre del titular de la tarjeta</label>
+              <input type="text" class="form-control" id="cardholderName" placeholder="John Doe">
+            </div>
+            <div class="mb-3">
+              <label for="cardNumber" class="form-label">Número de tarjeta</label>
+              <input type="text" class="form-control" id="cardNumber"
+                pattern="\d{4}\s\d{4}\s\d{4}\s\d{4}">
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label for="expiration" class="form-label">Vencimiento</label>
+                <input type="text" class="form-control" id="expiration">
+              </div>
+              <div class="col-md-6">
+                <label for="cvv" class="form-label">CVV</label>
+                <input type="" class="form-control" id="cvv">
+              </div>
+            </div>
+            <div class="mt-4">
+              <p>Subtotal <span id="subtotal" class="float-end">$0.00</span></p>
+              <p>Envío <span id="shipping" class="float-end">$20.00</span></p>
+              <hr>
+              <p>Total<span id="total" class="float-end">$0.00</span></p>
+              <button class="btn btn-info w-100">Checkout <span class="bi bi-arrow-right"></span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://unpkg.com/imask"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+
+</html>
